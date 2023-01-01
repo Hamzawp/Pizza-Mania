@@ -11,7 +11,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
 import OrderDetail from "../components/OrderDetail";
-import dbConnect from "../../../util/mongo";
+import dbConnect from "../util/mongo";
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
