@@ -11,6 +11,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
 import OrderDetail from "../components/OrderDetail";
+import dbConnect from "../../../util/mongo";
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
@@ -24,6 +25,7 @@ const Cart = () => {
 
     const createOrder = async (data) => {
         try {
+            await dbConnect();
             const res = await axios.post("https://pizza-mania-hamzawp.vercel.app/api/orders", data);
             if (res.status === 201) {
                 dispatch(reset());

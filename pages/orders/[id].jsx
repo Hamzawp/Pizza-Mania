@@ -1,6 +1,7 @@
 import styles from "../../styles/Order.module.css";
 import Image from "next/image";
 import axios from "axios";
+import dbConnect from "../../../util/mongo";
 
 const Order = ({ order }) => {
     const status = order.status;
@@ -116,6 +117,7 @@ const Order = ({ order }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
+    await dbConnect();
     const res = await axios.get(`https://pizza-mania-hamzawp.vercel.app/api/orders/${params.id}`);
     return {
         props: {

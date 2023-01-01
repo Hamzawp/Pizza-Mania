@@ -2,6 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
+import dbConnect from "../../../util/mongo";
 
 const Index = ({ orders, products }) => {
   const [pizzaList, setPizzaList] = useState(products);
@@ -128,7 +129,7 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-
+  await dbConnect();
   const productRes = await axios.get("https://pizza-mania-hamzawp.vercel.app/api/products");
   const orderRes = await axios.get("https://pizza-mania-hamzawp.vercel.app/api/orders");
 

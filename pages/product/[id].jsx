@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartSlice";
+import dbConnect from "../../../util/mongo";
 
 const Product = ({ pizza }) => {
     const [price, setPrice] = useState(pizza.prices[0]);
@@ -94,6 +95,7 @@ const Product = ({ pizza }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
+    await dbConnect();
     const res = await axios.get(`https://pizza-mania-hamzawp.vercel.app/api/products/${params.id}`);
     return {
         props: {

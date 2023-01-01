@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "../styles/Add.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
+import dbConnect from "../../../util/mongo";
 
 const Add = ({ setClose }) => {
     const [file, setFile] = useState(null);
@@ -42,6 +43,7 @@ const Add = ({ setClose }) => {
                 extraOptions,
                 img: url,
             };
+            await dbConnect();
             await axios.post("https://pizza-mania-hamzawp.vercel.app/api/products", newProduct);
             setClose(true);
         } catch (err) {
