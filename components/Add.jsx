@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../styles/Add.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
-import dbConnect from "../../../util/mongo";
+import dbConnect from "../util/mongo";
 
 const Add = ({ setClose }) => {
     const [file, setFile] = useState(null);

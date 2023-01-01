@@ -2,7 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
-import dbConnect from "../../../util/mongo";
+import dbConnect from "../../util/mongo";
 
 const Index = ({ orders, products }) => {
   const [pizzaList, setPizzaList] = useState(products);
