@@ -7,6 +7,7 @@
 <img src="https://raw.githubusercontent.com/Hamzawp/Pizza-Mania/main/public/Readmeimages/6.png?token=GHSAT0AAAAAABXAJK3KZGJPV3DTE255HZICY5SZPYA" />
 <img src="https://raw.githubusercontent.com/Hamzawp/Pizza-Mania/main/public/Readmeimages/7.png?token=GHSAT0AAAAAABXAJK3LQXPZAE3LC27IVCPGY5SZQJQ" />
 <img src="https://raw.githubusercontent.com/Hamzawp/Pizza-Mania/main/public/Readmeimages/8.png?token=GHSAT0AAAAAABXAJK3LBFDHHIGAVWWCOWTYY5SZTLA" />
+<img src="https://raw.githubusercontent.com/Hamzawp/Pizza-Mania/main/public/Readmeimages/12.png?token=GHSAT0AAAAAABXAJK3LNXZNV2EV7LDWR3ZCY5S2ASQ" />
 <img src="https://raw.githubusercontent.com/Hamzawp/Pizza-Mania/main/public/Readmeimages/9.png?token=GHSAT0AAAAAABXAJK3KKW6DCHZQSDFZVIQOY5SZRAA" />
 <br>
 <h1>Admin Interface</h1>
