@@ -6,6 +6,7 @@ import axios from "axios";
 import { useState } from "react";
 import Add from "../components/Add";
 import AddButton from "../components/AddButton";
+import Image from "next/image";
 
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
