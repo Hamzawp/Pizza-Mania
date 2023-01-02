@@ -96,7 +96,7 @@ const Product = ({ pizza }) => {
 
 export const getServerSideProps = async ({ params }) => {
     await dbConnect();
-    const res = await axios.get(process.env.URL + "api/products/" + params.id);
+    const res = await axios.get(process.env.PORT_URL + "api/products/" + params.id);
     return {
         props: {
             pizza: res.data,

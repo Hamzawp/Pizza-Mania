@@ -32,7 +32,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
   await dbConnect();
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get(process.env.PORT_URL + "api/products");
   return {
     props: {
       pizzaList: res.data,

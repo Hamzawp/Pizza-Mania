@@ -118,7 +118,7 @@ const Order = ({ order }) => {
 
 export const getServerSideProps = async ({ params }) => {
     await dbConnect();
-    const res = await axios.get(process.env.URL + "api/orders/" + params.id);
+    const res = await axios.get(process.env.PORT_URL + "api/orders/" + params.id);
     return {
         props: {
             order: res.data,
