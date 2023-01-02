@@ -6,7 +6,6 @@ import axios from "axios";
 import { useState } from "react";
 import Add from "../components/Add";
 import AddButton from "../components/AddButton";
-import dbConnect from "../util/mongo";
 
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
@@ -31,7 +30,6 @@ export const getServerSideProps = async (ctx) => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
   }
-  await dbConnect();
   const res = await axios.get(process.env.PORT_URL + "api/products");
   return {
     props: {
